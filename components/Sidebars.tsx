@@ -40,7 +40,7 @@ const sidebarOptions = [
     name: 'Medical Checkups',
     icon: Stethoscope,
     items: [
-      { name: 'Orthopedic', icon: FaBone, href: '/checkup/orthopedic' },
+      { name: 'Orthopedic Care Center', icon: FaBone, href: '/checkup/orthopedic' },
       { name: 'Vision', icon: Eye, href: '/checkup/vision' },
       { name: 'Hearing', icon: Ear, href: '/checkup/hearing' },
       { name: 'Fitness Assessment', icon: Activity, href: '/checkup/fitness' },
@@ -60,8 +60,16 @@ const sidebarOptions = [
       { name: 'Eye Conjunctiva Detector', icon: FaEye, href: '/ai-diagnostics/eye-conjunctiva' },
       { name: 'Cavity Detection', icon: FaTooth, href: '/ai-diagnostics/cavity' },
       { name: 'Drugs Detection', icon: GiMedicines, href: '/ai-diagnostics/drugs' },
+      { name: 'Fracture Detection', icon: FaBone, href: '/imaging/fracture-detection' },
     ]
    },
+   {
+    name: 'Pathology',
+    icon: Flask,
+    items: [
+      { name: 'Blood Analysis', icon: Droplet, href: '/pathology/blood-analysis' },
+    ]
+  },
   {
     name: 'Health Analysis',
     icon: FileText,
@@ -70,21 +78,7 @@ const sidebarOptions = [
       { name: 'EHR Analysis', icon: FileText, href: '/analysis/ehr-analysis' },
     ]
   },
-  {
-    name: 'Imaging Analysis',
-    icon: ImageIcon,
-    items: [
-      { name: 'Fracture Detection', icon: FaBone, href: '/imaging/fracture-detection' },
-      { name: 'Osteoporosis Screening', icon: FaBone, href: '/imaging/osteoporosis' },
-    ]
-  },
-  {
-    name: 'Pathology',
-    icon: Flask,
-    items: [
-      { name: 'Blood Analysis', icon: Droplet, href: '/pathology/blood-analysis' },
-    ]
-  },
+
   {
     name: 'Telemedicine',
     icon: Video,
