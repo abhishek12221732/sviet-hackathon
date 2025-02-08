@@ -21,6 +21,8 @@ import {
   Zap,
   Microscope,
   Droplet,
+  Pill,
+  
 } from 'lucide-react'
 import { FaBone, FaLungs, FaEye, FaTooth } from 'react-icons/fa'
 import { GiMedicines, GiLiver } from 'react-icons/gi'
@@ -59,7 +61,7 @@ const sidebarOptions = [
       { name: 'Cavity Detection', icon: FaTooth, href: '/ai-diagnostics/cavity' },
       { name: 'Drugs Detection', icon: GiMedicines, href: '/ai-diagnostics/drugs' },
     ]
-  },
+   },
   {
     name: 'Health Analysis',
     icon: FileText,
@@ -95,6 +97,17 @@ const sidebarOptions = [
     icon: Fingerprint,
     href: '/personalized-medicine'
   },
+  {
+    name: 'Know Your Tablet',
+    icon: Pill,
+    href: 'http://localhost:8501',
+    items: [
+      { name: 'Know Your Tablet', icon: 'none',href: 'http://localhost:8501' },
+      { name: 'Breast Cancer Detector', icon: 'none',href: 'http://localhost:8501/BreastCancerPredictor' },
+      { name: 'Excercise Tracker', icon: 'none',href: 'http://localhost:8501/ExerciseTracker' },
+    ]
+  }
+
 ]
 
 export default function Sidebar() {
@@ -126,48 +139,66 @@ export default function Sidebar() {
             AI Health Services
           </h2>
           <Accordion type="multiple" className="w-full space-y-2">
-            {sidebarOptions.map((option, index) => (
-              <AccordionItem value={`item-${index}`} key={index} className="border-none">
-                <AccordionTrigger className="hover:no-underline py-2 px-3 rounded-md transition-colors hover:bg-muted">
-                  <div className="flex items-center text-foreground">
-                    {option.icon && <option.icon className="mr-2 h-5 w-5 text-primary" />}
-                    <span className="text-sm font-medium">{option.name}</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  {option.items ? (
-                    <ul className="ml-6 space-y-1 mt-1">
-                      {option.items.map((item, itemIndex) => (
-                        <li key={itemIndex}>
-                          <Link 
-                            href={item.href}
-                            className={`flex items-center py-2 px-3 rounded-md transition-colors text-sm
-                              ${pathname === item.href 
-                                ? 'bg-primary/10 text-primary font-medium' 
-                                : 'text-muted-foreground hover:bg-muted'
-                              }`}
-                          >
-                            {item.icon && <item.icon className="mr-2 h-4 w-4" />}
-                            <span>{item.name}</span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <Link 
-                      href={option.href}
-                      className={`flex items-center py-2 px-3 rounded-md transition-colors text-sm ml-6
-                        ${pathname === option.href 
-                          ? 'bg-primary/10 text-primary font-medium' 
-                          : 'text-muted-foreground hover:bg-muted'
-                        }`}
-                    >
-                      <span>{option.name}</span>
-                    </Link>
-                  )}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
+          {sidebarOptions.map((option, index) => (
+  <AccordionItem value={`item-${index}`} key={index} className="border-none">
+    <AccordionTrigger className="hover:no-underline py-2 px-3 rounded-md transition-colors hover:bg-muted">
+      <div className="flex items-center text-foreground">
+        {option.icon && <option.icon className="mr-2 h-5 w-5 text-primary" />}
+        <span className="text-sm font-medium">{option.name}</span>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      {option.items ? (
+        <ul className="ml-6 space-y-1 mt-1">
+          {option.items.map((item, itemIndex) => (
+            <li key={itemIndex}>
+              <Link 
+                href={item.href}
+                className={`flex items-center py-2 px-3 rounded-md transition-colors text-sm
+                  ${pathname === item.href 
+                    ? 'bg-primary/10 text-primary font-medium' 
+                    : 'text-muted-foreground hover:bg-muted'
+                  }`}
+              >
+                {item.icon && <item.icon className="mr-2 h-4 w-4" />}
+                <span>{item.name}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        option.href.startsWith('http') ? (
+          // External link
+          <a 
+            href={option.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center py-2 px-3 rounded-md transition-colors text-sm ml-6
+              ${pathname === option.href 
+                ? 'bg-primary/10 text-primary font-medium' 
+                : 'text-muted-foreground hover:bg-muted'
+              }`}
+          >
+            <span>{option.name}</span>
+          </a>
+        ) : (
+          // Internal link
+          <Link 
+            href={option.href}
+            className={`flex items-center py-2 px-3 rounded-md transition-colors text-sm ml-6
+              ${pathname === option.href 
+                ? 'bg-primary/10 text-primary font-medium' 
+                : 'text-muted-foreground hover:bg-muted'
+              }`}
+          >
+            <span>{option.name}</span>
+          </Link>
+        )
+      )}
+    </AccordionContent>
+  </AccordionItem>
+))}
+
           </Accordion>
         </nav>
       </aside>
