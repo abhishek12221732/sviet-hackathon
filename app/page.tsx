@@ -66,9 +66,9 @@ export default function EnhancedLandingPage() {
   ]
 
   const testimonials = [
-    { name: 'John Doe', role: 'Patient', content: 'HealthTech has revolutionized my healthcare experience. The personalized approach and cutting-edge technology have significantly improved my well-being.' },
-    { name: 'Dr. Jane Smith', role: 'Cardiologist', content: 'As a healthcare professional, I\'m impressed by HealthTech\'s innovative solutions. They\'ve made diagnostics more accurate and treatment plans more effective.' },
-    { name: 'Sarah Johnson', role: 'Wellness Coach', content: 'HealthTech\'s holistic approach to health management has been a game-changer for my clients. The integration of AI and personalized medicine is truly remarkable.' },
+    { name: 'John Doe', role: 'Patient', content: 'MediCheck has revolutionized my healthcare experience. The personalized approach and cutting-edge technology have significantly improved my well-being.' },
+    { name: 'Dr. Jane Smith', role: 'Cardiologist', content: 'As a healthcare professional, I\'m impressed by MediCheck\'s innovative solutions. They\'ve made diagnostics more accurate and treatment plans more effective.' },
+    { name: 'Sarah Johnson', role: 'Wellness Coach', content: 'MediCheck\'s holistic approach to health management has been a game-changer for my clients. The integration of AI and personalized medicine is truly remarkable.' },
   ]
 
   const faqs = [
@@ -138,7 +138,7 @@ export default function EnhancedLandingPage() {
 
         <section className="py-20 px-6 bg-primary/10">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center text-primary">Why Choose HealthTech?</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center text-primary">Why Choose MediCheck?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Advanced Medical Technology" className="rounded-lg shadow-lg" />
@@ -312,7 +312,7 @@ export default function EnhancedLandingPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">HealthTech</h3>
+              <h3 className="text-2xl font-bold mb-4">MediCheck</h3>
               <p>Empowering your health with cutting-edge technology</p>
             </div>
             <div>
@@ -331,11 +331,11 @@ export default function EnhancedLandingPage() {
               <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
               <p>123 Health Street, Medical City, HC 12345</p>
               <p>Phone: (123) 456-7890</p>
-              <p>Email: info@healthtech.com</p>
+              <p>Email: info@medicheck.com</p>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
-            <p>&copy; 2024 HealthTech. All rights reserved.</p>
+            <p>&copy; 2024 MediCheck. All rights reserved.</p>
           </div>
         </div>
       </footer>

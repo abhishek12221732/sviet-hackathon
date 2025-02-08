@@ -51,7 +51,7 @@ const generateMockLeaderboard = (): LeaderboardEntry[] => [
     { username: "NurseAnalyzer", score: 8200, tests: 42 },
     { username: "TeleMedExpert", score: 7800, tests: 38 },
     { username: "EmergencyTester", score: 7200, tests: 35 },
-    { username: "HealthTechGuru", score: 6500, tests: 30 },
+    { username: "MediCheckGuru", score: 6500, tests: 30 },
 ];
 
 const HealthcareStressTestPage: React.FC = () => {
